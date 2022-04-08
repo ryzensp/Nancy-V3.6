@@ -179,20 +179,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('Piracy Is Crime')
+                    return await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('Piracy Is Crime')
+                return await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
@@ -246,7 +246,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode="md"
         )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -290,7 +290,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -319,7 +319,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
         buttons = []
         for groupid in groupids:
             try:
@@ -454,18 +454,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "pages":
         await query.answer()
     elif query.data == "start":
-        buttons = [[
-            InlineKeyboardButton('➕ Add me to your Chat ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+        buttons =[[
+            InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('⭕️ Help', callback_data='help'),
-            InlineKeyboardButton('About ⭕️', callback_data='about')
+            InlineKeyboardButton('🔎 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
+            InlineKeyboardButton('⚙️ ʜᴇʟᴘ', callback_data='help')
             ],[
-            InlineKeyboardButton('🕵️ Search here Movie 🕵️', switch_inline_query_current_chat='')
+            InlineKeyboardButton('📣 ɢʀᴏᴜᴘ & ᴄʜᴀɴɴᴇʟ ʟɪɴᴋs 📣', callback_data='link')
             ],[
-            InlineKeyboardButton('⭕️ Updates', url='https://t.me/josprojects'),
-            InlineKeyboardButton('Movie Club ⭕️', url='https://t.me/+y53tWFUw6Q43NzE9')
-            ],[
-            InlineKeyboardButton('❌ Close the Menu ❌', callback_data='close_data')
+            InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ', callback_data='about'),
+            InlineKeyboardButton('🔐 ᴄʟᴏsᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -474,7 +472,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('Piracy Is Crime')
+        await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('Connect', callback_data='coct'),
