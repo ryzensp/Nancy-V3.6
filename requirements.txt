@@ -26,3 +26,4 @@ ytthumb
 pypdf2
 PyPDF2
 Heroku3
+countryinfo
