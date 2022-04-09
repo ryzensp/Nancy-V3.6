@@ -13,6 +13,9 @@ Here Is The Help For My Commands.</b>"""
     HACKER_TXT = """<b>Hey {}
 Here Is The Help For My Commands.</b>"""
 
+    HACK_TXT = """<b>Hey {}
+Here Is The Help For My Commands.</b>"""
+
     ABOUT_TXT = """<b>➥ My name: {}
 ➥ Creator: <a href='https://t.me/zautekm'>Zaute Km</a>
 ➥ Library: <a href='https://docs.pyrogram.org/'>Pyrogram</a>
@@ -21,16 +24,16 @@ Here Is The Help For My Commands.</b>"""
 ➥ Bot Server: <a href='https://heroku.com'>Heroku</a>
 ➥ Build Status: v2.0.1 [ Beta ]"""
 
-    SOURCE_TXT = """<b>Source:</b>
-IMDb is a Open source project.
-Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 👈</a>
+    CORONA_TXT ="""Help: <b>Corona</b>
 
-<b>DEVS:</b>
-- <a href='https://t.me/josprojects'>Jos Projects</a>
+<b>Here is the help for the coron information module</b>
 
-<b>SUPPORT GROUP</b>
-- <a href='https://t.me/+y53tWFUw6Q43NzE9'>Jos Movie Club</a>"""
+➢ /covid <code>(countryname)</code> <b>you can find a corona information of every country</b>
 
+➢ <b>Example</b> : - /covid India
+
+    STICKER_TXT ="""<b>COMMAND <code>/stickerid</codo>\n\n𝖨𝖿 𝖸𝗈𝗎 𝖭𝖾𝖾𝖽 𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗆 𝖲𝗍𝗂𝖼𝗄𝖾𝗋 𝖨𝖽 𝖢𝗅𝗂𝖼𝗄 /stickerid 𝖳𝗈 𝖦𝖾𝗍 𝖲𝗍𝗂𝖼𝗄𝖾𝗋 𝖨𝖽 (𝖱𝖾𝗉𝗅𝗒 𝖶𝗂𝗍𝗁 𝖲𝗍𝗂𝖼𝗄𝖾𝗋)</b>"""
+    
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and Dingdi will respond whenever a keyword is found the message
@@ -60,6 +63,42 @@ Source: <a href='https://github.com/josprojects/tgmoviebot'>GitHub - Click here 
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
+
+    JSON_TXT ="""<b>JSON</b>
+
+Bot Send Json For All Replied Messages Using A Simple Command.
+
+<b>Command and Usage:</b>
+
+◉ /json :- Reply To Any Message To Get Json
+◉ You Can Use This Command In Pm And Groups."""
+
+    REPORT_TEXT = """𝖧𝖾𝗅𝗉: <b><u>𝖱𝖾𝗉𝗈𝗋𝗍</u></b>
+
+Report something wrong to group admins for review!
+
+<b><u>𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌:</u></b>
+➢ /report [reply] - Report a message to admins for review.
+➢ /report [reason] - Report a message to admins with reason.
+➢ @admins - Same as report command, but not a command.
+
+<b><u>NOTE:</u></b>
+• Nancy should have admin privillage.
+• These commands can be used only in group.
+• These commands can be used by any group member."""
+
+    AFK_TXT = """Help: <b>AFK</b>
+
+Away From Keyboard is to tell that you're not available!
+
+<b>Commands and Usage:</b>
+• /afk - Mark yourself as afk.
+• /afk [reason] - Mark yourself as afk with reason.
+
+NOTE:
+• Nancy should have admin privillage.
+• These commands can be used only in group.
+• These commands can be used by any group member."""
 
     FILLINGS_TXT = """Help: <b>Fillings</b>
 
