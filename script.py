@@ -13,7 +13,7 @@ Here Is The Help For My Commands.</b>"""
     HACKER_TXT = """<b>Hey {}
 Here Is The Help For My Commands.</b>"""
 
-    HACK_TXT = """<b>Hey {}
+    HELLP_TXT = """<b>Hey {}
 Here Is The Help For My Commands.</b>"""
 
     BOTSTATUS_TXT = """Send /status for getting bot and heroku status"""
