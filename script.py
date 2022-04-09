@@ -7,9 +7,11 @@ My name is <a href=https://t.me/{}>{}</a>!
 
 Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
 
-    HELP_TXT = """Hey {}
+    HELP_TXT = """<b>Hey {}
+Here Is The Help For My Commands.</b>"""
 
-<b>Here Is The Help For My Commands.</b>"""
+    HACKER_TXT = """<b>Hey {}
+Here Is The Help For My Commands.</b>"""
 
     ABOUT_TXT = """<b>➥ My name: {}
 ➥ Creator: <a href='https://t.me/zautekm'>Zaute Km</a>
