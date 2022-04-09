@@ -518,7 +518,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('💨Close', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await client.send_sticker(
+        await query.message.send_sticker(
             sticker="CAACAgUAAxkBAAEGCmBiUUy3xeeJqrl3q6OIcAiYvnSzegACGQYAAje7iFZisi8qLpE8XB4E",
             disable_web_page_preview=True,
             reply_markup=reply_markup,
