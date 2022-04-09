@@ -487,7 +487,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀɴs', callback_data='restric'),
             InlineKeyboardButton('ɪᴍᴅʙ', callback_data='search')
             ],[
-            InlineKeyboardButton('sᴏɴɢ', callback_data='source'),
+            InlineKeyboardButton('ᴀᴜᴅɪᴏ-ʙᴏᴏᴋ', callback_data='abook'),
             InlineKeyboardButton('ᴘɪɴ', callback_data='pin'),
             InlineKeyboardButton('ɢᴀᴍᴇs', callback_data='memes')
             ],[
@@ -683,6 +683,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.GTRANS_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "abook":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.ABOOK_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
