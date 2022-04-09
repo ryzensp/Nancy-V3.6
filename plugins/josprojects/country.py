@@ -19,7 +19,7 @@ Calling Codes : `{country.calling_codes()}`
 Currencies : `{country.currencies()}`
 Residence : `{country.demonym()}`
 Timezone : `{country.timezones()}`
-Made by **@kerala_rockers ❤️**"""
+Made by **@kerala_rockers**"""
     country_name = country.name()
     country_name = country_name.replace(" ", "+")
     reply_markup=InlineKeyboardMarkup(
@@ -39,4 +39,5 @@ Made by **@kerala_rockers ❤️**"""
         await update.reply_text(
             text=error,
             disable_web_page_preview=True,
-            
+            quote=True
+        )    
