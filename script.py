@@ -10,11 +10,9 @@ Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
     HELP_TXT = """<b>Hey {}
 Here Is The Help For My Commands.</b>"""
 
-    HACKER_TXT = """<b>Hey {}
-Here Is The Help For My Commands.</b>"""
+    HACKER_TXT = """<b>Here Is The Help For My Commands.</b>"""
 
-    HELLP_TXT = """<b>Hey {}
-Here Is The Help For My Commands.</b>"""
+    HELLP_TXT = """<b>Here Is The Help For My Commands.</b>"""
 
     BOTSTATUS_TXT = """Send /status for getting bot and heroku status"""
 
