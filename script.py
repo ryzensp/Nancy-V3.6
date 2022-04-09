@@ -366,7 +366,7 @@ Music download modules, for those who love music.
 
 ➢ /covid <code>(countryname)</code> <b>you can find a corona information of every country</b>
 
-➢ <b>Example</b> : - /covid India
+➢ <b>Example</b> : - /covid India"""
 
     PASSWORD_GEN_TXT = """Help: <b>Password Generator</b>
 
