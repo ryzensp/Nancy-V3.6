@@ -23,14 +23,6 @@ Here Is The Help For My Commands.</b>"""
 ➥ Data Base: <a href='https://www.mongodb.com/'>MongoDB</a>
 ➥ Bot Server: <a href='https://heroku.com'>Heroku</a>
 ➥ Build Status: v2.0.1 [ Beta ]"""
-
-    CORONA_TXT ="""Help: <b>Corona</b>
-
-<b>Here is the help for the coron information module</b>
-
-➢ /covid <code>(countryname)</code> <b>you can find a corona information of every country</b>
-
-➢ <b>Example</b> : - /covid India
    
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
