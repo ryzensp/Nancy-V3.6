@@ -63,6 +63,42 @@ Bot Send Json For All Replied Messages Using A Simple Command.
 ◉ /json :- Reply To Any Message To Get Json
 ◉ You Can Use This Command In Pm And Groups."""
 
+    COUNTRY_TXT = """Help: <b>COUNTRY</b>
+
+Here is the help for County information module.
+
+I am a country information finder.
+
+/country [countryname] 
+I can find information of any country of the world"""
+
+    LOGO_TXT = """Help: <b>LOGO</b>
+
+Create awesome cool logo with your name!
+
+USAGE:
+➢ /logo [text] - Create logo with given text.
+➢ /logo [reply][colour] - Create logo with replied text.
+➢ /logo [text]|[colour] - Create logo with text & colour.
+
+<b>NOTE</b>:
+• Nancy should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
+    CARBON_TXT = """HELP: <b>CARBON</b>
+
+Beautify your code using carbon.now.sh!
+
+USAGE:
+➢ /carbon [text] - Create carbon from the given text.
+➢ /carbon [reply] - Create carbon from the replied text.
+
+<b>NOTE</b>:
+• Nancy should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
     LOCK_TXT = """Here is the help for the <b>Locks</b> module:
 
 <b>Admin only</b>:
