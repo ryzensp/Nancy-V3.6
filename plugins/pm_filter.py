@@ -522,8 +522,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.message.send_sticker(
             sticker="CAACAgUAAxkBAAEGCmBiUUy3xeeJqrl3q6OIcAiYvnSzegACGQYAAje7iFZisi8qLpE8XB4E",
             chat_id=query.message.chat.id,
-            reply_markup=reply_markup,
-            parse_mode='html'
+            reply_markup=reply_markup
+            #parse_mode='html'
         )
     elif query.data == "about":
         buttons = [[
