@@ -513,7 +513,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "aboutt":
         await query.message.delete()
         buttons = [[
-            InlineKeyboardButton('💨ᴀʙᴏᴜᴛ', callback_data='aboutt')
+            InlineKeyboardButton('💨ᴀʙᴏᴜᴛ', callback_data='about')
             ],[
             InlineKeyboardButton('💨Home', callback_data='start'),
             InlineKeyboardButton('💨Close', callback_data='close_data')
