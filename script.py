@@ -360,6 +360,14 @@ Music download modules, for those who love music.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
+    CORONA_TXT ="""Help: <b>Corona</b>
+
+<b>Here is the help for the coron information module</b>
+
+➢ /covid <code>(countryname)</code> <b>you can find a corona information of every country</b>
+
+➢ <b>Example</b> : - /covid India
+
     PASSWORD_GEN_TXT = """Help: <b>Password Generator</b>
 
 There Is Nothing To Know More. Send Me The Limit Of Your Password.
