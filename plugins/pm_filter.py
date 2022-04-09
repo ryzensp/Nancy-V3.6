@@ -521,7 +521,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await client.send_sticker(
             sticker="CAACAgUAAxkBAAEGCmBiUUy3xeeJqrl3q6OIcAiYvnSzegACGQYAAje7iFZisi8qLpE8XB4E",
             disable_web_page_preview=True,
-            reply_markup=reply_markup
+            reply_markup=reply_markup,
             parse_mode='html'
         )
     elif query.data == "aboutt":
