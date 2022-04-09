@@ -23,3 +23,6 @@ python-arq
 ffmpeg-python
 requests
 ytthumb
+pypdf2
+PyPDF2
+
