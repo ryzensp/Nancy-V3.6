@@ -504,7 +504,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "hacker":
         buttons = [[
             InlineKeyboardButton('ᴛɢʀᴀᴘʜ', callback_data='tgraph'),
-            InlineKeyboardButton('sᴛɪᴄᴋᴇʀ', callback_data='stickerid'),
+            InlineKeyboardButton('sᴛɪᴄᴋᴇʀ', callback_data='sticker'),
             InlineKeyboardButton('ᴛᴏʀʀᴇɴᴛ', callback_data='torrent')
             ],[
             InlineKeyboardButton('ᴄᴏʀᴏɴᴀ', callback_data='corona'),
@@ -529,10 +529,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "hacker":
+    elif query.data == "hack":
         buttons = [[
-            InlineKeyboardButton('ᴛɢʀᴀᴘʜ', callback_data='tgraph'),
-            InlineKeyboardButton('sᴛɪᴄᴋᴇʀ', callback_data='stickerid'),
+            InlineKeyboardButton('ʟᴏᴄᴋs', callback_data='lock'),
+            InlineKeyboardButton('ʙᴏᴛ-sᴛᴀᴛᴜs', callback_data='restatus'),
             InlineKeyboardButton('ᴛᴏʀʀᴇɴᴛ', callback_data='torrent')
             ],[
             InlineKeyboardButton('ᴄᴏʀᴏɴᴀ', callback_data='corona'),
@@ -585,17 +585,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "stickerid":
-        buttons = [[
-            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hack')
-        ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        await query.message.edit_text(
-            text=Script.STICKER_TXT,
-            disable_web_page_preview=True,
-            reply_markup=reply_markup,
-            parse_mode='html'
-        )
     elif query.data == "manualfilter":
         buttons = [[
             InlineKeyboardButton('ʙᴜᴛᴛᴏɴs', callback_data='button'),
@@ -617,6 +606,28 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.BUTTON_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "restatus":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.BOTSTATUS_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "lock":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hack')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.LOCK_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -675,6 +686,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.CORONA_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "sticker":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hacker')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.STICKER_TXT,
+            disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
         )
