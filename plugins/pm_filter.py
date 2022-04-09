@@ -533,12 +533,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('ʟᴏᴄᴋs', callback_data='lock'),
             InlineKeyboardButton('ʙᴏᴛ-sᴛᴀᴛᴜs', callback_data='restatus'),
-            InlineKeyboardButton('ᴛᴏʀʀᴇɴᴛ', callback_data='torrent')
+            InlineKeyboardButton('ᴄᴀʀʙᴏɴ', callback_data='carbon')
             ],[
-            InlineKeyboardButton('ᴄᴏʀᴏɴᴀ', callback_data='corona'),
-            InlineKeyboardButton('ʀᴇᴘᴏʀᴛs', callback_data='report'),
+            InlineKeyboardButton('ʟᴏɢᴏ', callback_data=''logo),
+            InlineKeyboardButton('ᴄᴏᴜɴᴛʀʏ', callback_data='country'),
             InlineKeyboardButton('ꜰɪʟᴇ-sᴛᴏʀᴇ', callback_data='addfle')
-            ],[           
+            ],[          
             InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='hellp'),
             InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
         ]]
@@ -620,6 +620,39 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.LOCK_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "logo":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.LOGO_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "carbon":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.CARBON_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "country":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.COUNTRY_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
