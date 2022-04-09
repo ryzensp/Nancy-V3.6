@@ -462,7 +462,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('📣 ɢʀᴏᴜᴘ & ᴄʜᴀɴɴᴇʟ ʟɪɴᴋs 📣', callback_data='link')
             ],[
-            InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ', callback_data='about'),
+            InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ', callback_data='aboutt'),
             InlineKeyboardButton('🔐 ᴄʟᴏsᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -506,10 +506,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.HELP_TXT.format(query.from_user.mention),
+            disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "about":
+    elif query.data == "aboutt":
         await query.message.delete()
         buttons = [[
             InlineKeyboardButton('💨ᴀʙᴏᴜᴛ', callback_data='aboutt')
@@ -520,11 +521,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.send_sticker(
             sticker="CAACAgUAAxkBAAEGCmBiUUy3xeeJqrl3q6OIcAiYvnSzegACGQYAAje7iFZisi8qLpE8XB4E",
-            disable_web_page_preview=True,
+            chat_id=query.message.chat.id,
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "aboutt":
+    elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('⭕ Status', url='https://t.me/josprojects/221'),
             InlineKeyboardButton('Source 🪤', callback_data='source')
