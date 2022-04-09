@@ -28,15 +28,4 @@ PyPDF2
 Heroku3
 countryinfo
 carbonnow==0.0.1
-Pillow>=4.2.0
-bs4
-string-extract
-domain-extract
-hashtags_extract
-Pymoe
-pendulum
-pytesseract
-persondoesnotexist
-catdoesnotexist
-python-decouple
-speedtest-cli
+
