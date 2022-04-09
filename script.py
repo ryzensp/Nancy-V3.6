@@ -360,6 +360,14 @@ Music download modules, for those who love music.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
+    STICKER_TXT = """<b>𝗛𝗲𝗹𝗽 𝗙𝗼𝗿 𝗦𝘁𝗶𝗰𝗸𝗲𝗿 𝗶𝗱
+
+• 𝗨𝘀𝗮𝗴𝗲
+To Get Sticker ID
+
+• 𝗛𝗼𝘄 𝗧𝗼 𝗨𝘀𝗲
+◉ Reply To Any Sticker [<code>/stickerid</code>]</b>"""
+
     CORONA_TXT ="""Help: <b>Corona</b>
 
 <b>Here is the help for the coron information module</b>
