@@ -510,6 +510,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
             parse_mode='html'
         )
     elif query.data == "about":
+        await query.message.delete()
+        buttons = [[
+            InlineKeyboardButton('💨ᴀʙᴏᴜᴛ', callback_data='aboutt')
+            ],[
+            InlineKeyboardButton('💨Home', callback_data='start'),
+            InlineKeyboardButton('💨Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.send_sticker(
+            sticker="CAACAgUAAxkBAAEGCmBiUUy3xeeJqrl3q6OIcAiYvnSzegACGQYAAje7iFZisi8qLpE8XB4E",
+            chat_id=query.message.chat.id,
+            reply_markup=reply_markup
+            #parse_mode='html'
+        )
+    elif query.data == "aboutt":
         buttons = [[
             InlineKeyboardButton('⭕ Status', url='https://t.me/josprojects/221'),
             InlineKeyboardButton('Source 🪤', callback_data='source')
