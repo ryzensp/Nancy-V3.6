@@ -16,6 +16,8 @@ Here Is The Help For My Commands.</b>"""
     HACK_TXT = """<b>Hey {}
 Here Is The Help For My Commands.</b>"""
 
+    BOTSTATUS_TXT = """Send /status for getting bot and heroku status"""
+
     ABOUT_TXT = """<b>➥ My name: {}
 ➥ Creator: <a href='https://t.me/zautekm'>Zaute Km</a>
 ➥ Library: <a href='https://docs.pyrogram.org/'>Pyrogram</a>
@@ -62,6 +64,20 @@ Bot Send Json For All Replied Messages Using A Simple Command.
 
 ◉ /json :- Reply To Any Message To Get Json
 ◉ You Can Use This Command In Pm And Groups."""
+
+    LOCK_TXT = """Here is the help for the <b>Locks</b> module:
+
+<b>Admin only</b>:
+× /lock <permission>: Lock Chat permission..
+× /unlock <permission>: Unlock Chat permission.
+× /locks: View Chat permission.
+× /locktypes: Check available lock types!
+Locks can be used to restrict a group's users.
+Locking urls will auto-delete all messages with urls, locking stickers will delete all stickers, etc.
+Locking bots will stop non-admins from adding bots to the chat.
+
+Example:
+/lock media: this locks all the media messages in the chat."""
 
     REPORT_TEXT = """𝖧𝖾𝗅𝗉: <b><u>𝖱𝖾𝗉𝗈𝗋𝗍</u></b>
 
