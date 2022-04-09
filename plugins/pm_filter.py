@@ -529,7 +529,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "hack":
+    elif query.data == "hellp":
         buttons = [[
             InlineKeyboardButton('ʟᴏᴄᴋs', callback_data='lock'),
             InlineKeyboardButton('ʙᴏᴛ-sᴛᴀᴛᴜs', callback_data='restatus'),
@@ -538,21 +538,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ᴄᴏʀᴏɴᴀ', callback_data='corona'),
             InlineKeyboardButton('ʀᴇᴘᴏʀᴛs', callback_data='report'),
             InlineKeyboardButton('ꜰɪʟᴇ-sᴛᴏʀᴇ', callback_data='addfle')
-            ],[
-            InlineKeyboardButton('ᴜʀʟ sʜᴏʀᴛ', callback_data='shortner'),
-            InlineKeyboardButton('ᴢᴏᴍʙɪᴇs', callback_data='zombies'),
-            InlineKeyboardButton('ᴛᴛ-sᴘᴇᴇᴄʜ', callback_data='tts')
-            ],[
-            InlineKeyboardButton('ɢᴛʀᴀɴs', callback_data='gtrans'),
-            InlineKeyboardButton('ᴊsᴏɴ', callback_data='json'),
-            InlineKeyboardButton('sʜᴀʀᴇ-ᴛᴇxᴛ', callback_data='sharetext')
-            ],[
-            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help'),
-            InlineKeyboardButton('ɴᴇxᴛ»', callback_data='')
+            ],[           
+            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='hellp'),
+            InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
-            text=Script.HACK_TXT.format(query.from_user.mention),
+            text=Script.HELLP_TXT.format(query.from_user.mention),
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
@@ -612,7 +604,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "restatus":
         buttons = [[
-            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='help')
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -623,7 +615,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "lock":
         buttons = [[
-            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hack')
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
