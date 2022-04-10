@@ -529,7 +529,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "hellp":
+    elif query.data == "hacker":
         buttons = [[
             InlineKeyboardButton('ʟᴏᴄᴋs', callback_data='lock'),
             InlineKeyboardButton('ʙᴏᴛ-sᴛᴀᴛᴜs', callback_data='restatus'),
@@ -544,6 +544,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʏᴛ-ᴛʜᴜᴍʙ', callback_data='ytthumb')
             ],[
             InlineKeyboardButton('ᴠɪᴅᴇᴏ', callback_data='video'),
+            InlineKeyboardButton('ɪᴘ-ᴀᴅᴅʀᴇss', callback_data='ipad'),
             InlineKeyboardButton('ɢ-ᴘᴀssᴡᴏʀᴅ', callback_data='genpassword')
             ],[          
             InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help'),
@@ -616,6 +617,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.SONG_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "ipad":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.IPADD_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
