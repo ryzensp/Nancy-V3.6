@@ -427,6 +427,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('🔰 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+CeY_RGCtK1g0ZWQ9'),
                 InlineKeyboardButton('🔱 ᴄʜᴀɴɴᴇʟ', url='https://t.me/kerala_rockers')
             ]
+            ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
