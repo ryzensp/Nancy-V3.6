@@ -376,6 +376,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton('🔰 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+CeY_RGCtK1g0ZWQ9'),
                 InlineKeyboardButton('🔱 ᴄʜᴀɴɴᴇʟ', url='https://t.me/kerala_rockers')
             ]
+            ]
+
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
                 await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
