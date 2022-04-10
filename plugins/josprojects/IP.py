@@ -11,8 +11,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 async def ip(client, message): 
     searchip = message.text.split(" ", 1)
     if len(searchip) == 1:
-        await message.reply_text("**Usage:**\n/ip [ip]")
-        return
     else:
         searchip = searchip[1]
         m = await message.reply_text("Searching...")
