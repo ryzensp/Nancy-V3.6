@@ -437,15 +437,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             protect_content=True if ident == 'checksubp' else False
         )
     elif query.data == "pages":
-        await query.answer(➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시)
+        await query.answer()
     elif query.data == "start":
         buttons =[[
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🔎 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
             InlineKeyboardButton('⚙️ ʜᴇʟᴘ', callback_data='help')
-            ],[
-            InlineKeyboardButton('📣 ɢʀᴏᴜᴘ & ᴄʜᴀɴɴᴇʟ ʟɪɴᴋs 📣', callback_data='link')
             ],[
             InlineKeyboardButton('😎 ᴀʙᴏᴜᴛ', callback_data='about'),
             InlineKeyboardButton('🔐 ᴄʟᴏsᴇ', callback_data='close_data')
