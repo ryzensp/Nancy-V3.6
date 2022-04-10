@@ -537,7 +537,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('ʟᴏɢᴏ', callback_data='logo'),
             InlineKeyboardButton('ᴄᴏᴜɴᴛʀʏ', callback_data='country'),
-            InlineKeyboardButton('ꜰɪʟᴇ-sᴛᴏʀᴇ', callback_data='addfle')
+            InlineKeyboardButton('ᴛᴇxᴛ-ɪᴍɢ', callback_data='img')
             ],[          
             InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='hellp'),
             InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
@@ -598,6 +598,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.BUTTON_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "img":
+        buttons = [[
+            InlineKeyboardButton('« 𝐵𝑎𝑐𝑘', callback_data='help')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.IMG_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
