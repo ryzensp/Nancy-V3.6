@@ -113,12 +113,8 @@ async def next_page(bot, query):
                 InlineKeyboardButton("⏪ BACK", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"📗 {round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
                 InlineKeyboardButton("NEXT ⏩", callback_data=f"next_{req}_{key}_{n_offset}")]
-            )
-    btn.insert(0, [
-        InlineKeyboardButton("🤖 Check PM", url=f"https://t.me/{temp.U_NAME}"),
-        InlineKeyboardButton(f"📁 Files: {total_results}", "dupe")
-    ])
-    try:
+        )
+     try:
         await query.edit_message_reply_markup(
             reply_markup=InlineKeyboardMarkup(btn)
         )
@@ -377,12 +373,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{files.file_name}"
         buttons = [
             [
-                InlineKeyboardButton('⭕️ Support', url='https://t.me/JOSPSupport'),
-                InlineKeyboardButton('Channel ⭕️', url='https://t.me/JosProjects')
-            ],
-            [
-                InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+y53tWFUw6Q43NzE9')
-            ]
+                InlineKeyboardButton('🔰 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+CeY_RGCtK1g0ZWQ9'),
+                InlineKeyboardButton('🔱 ᴄʜᴀɴɴᴇʟ', url='https://t.me/kerala_rockers')
             ]
 
         try:
@@ -431,12 +423,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f"{title}"
         buttons = [
             [
-                InlineKeyboardButton('⭕️ Support', url='https://t.me/JOSPSupport'),
-                InlineKeyboardButton('Channel ⭕️', url='https://t.me/JosProjects')
-            ],
-            [
-                InlineKeyboardButton('🎬 Series & Movie Club 🎬', url=f'https://t.me/+y53tWFUw6Q43NzE9')
-            ]
+                InlineKeyboardButton('🔰 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+CeY_RGCtK1g0ZWQ9'),
+                InlineKeyboardButton('🔱 ᴄʜᴀɴɴᴇʟ', url='https://t.me/kerala_rockers')
             ]
         await query.answer()
         await client.send_cached_media(
@@ -542,7 +530,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ɪᴘ-ᴀᴅᴅʀᴇss', callback_data='ipad'),
             InlineKeyboardButton('ɢ-ᴘᴀssᴡᴏʀᴅ', callback_data='genpassword')
             ],[          
-            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help'),
+            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='hacker'),
             InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -568,6 +556,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "code":
+        await query.answer("നീ ഏതാ..... ഒന്ന് പോടെയ് അവൻ Source Code ചോയ്ച്ച് വന്നിരിക്കുന്നു. നോക്കി ഇരുന്നോ, ഇപ്പൊ കിട്ടും. 😂 മാമനൊടു ഒന്നും തോന്നല്ലേ മക്കളേ. 😊",show_alert=True)
     elif query.data == "torrent":
         buttons = [[
             InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hacker'),
@@ -1227,7 +1217,7 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"<b>{message.from_user.mention}\n👮‍♂ ɴᴏᴛɪᴄᴇ :ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ. ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ🔎\n @Powered Bʏ :{message.chat.title}</b>"
+        cap = f"<b>👮‍♂ ɴᴏᴛɪᴄᴇ :- ɪ𝙵 ʏᴏᴜ ᴅᴏ ɴᴏᴛ sᴇᴇ ᴛʜᴇ 𝙵ɪʟᴇ𝚂 ᴏ𝙵 ᴛʜɪ𝚂 ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀ𝚂ᴋᴇᴅ 𝙵ᴏʀ. ʟᴏᴏᴋ ᴀᴛ ɴᴇ𝚇ᴛ ᴘᴀɢᴇ 🕵️\n ©️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ :{message.chat.title}</b>"
     if imdb and imdb.get('poster'):
         try:
             hehe = await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024], reply_to_message_id=reply_id, reply_markup=InlineKeyboardMarkup(btn))
