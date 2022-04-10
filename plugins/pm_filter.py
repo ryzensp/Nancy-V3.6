@@ -538,8 +538,15 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʟᴏɢᴏ', callback_data='logo'),
             InlineKeyboardButton('ᴄᴏᴜɴᴛʀʏ', callback_data='country'),
             InlineKeyboardButton('ᴛᴇxᴛ-ɪᴍɢ', callback_data='img')
+            ],[
+            InlineKeyboardButton('ꜰᴏɴᴛs', callback_data='fonts'),
+            InlineKeyboardButton('sᴏɴɢ', callback_data='songs'),
+            InlineKeyboardButton('ʏᴛ-ᴛʜᴜᴍʙ', callback_data='ytthumb')
+            ],[
+            InlineKeyboardButton('ᴠɪᴅᴇᴏ', callback_data='video'),
+            InlineKeyboardButton('ɢ-ᴘᴀssᴡᴏʀᴅ', callback_data='genpassword')
             ],[          
-            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='hellp'),
+            InlineKeyboardButton('«ʙᴀᴄᴋ', callback_data='help'),
             InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -602,9 +609,51 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "songs":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.SONG_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "ytthumb":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.YTTHUMB_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "video":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.VIDEO_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "genpassword":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.PASSWORD_GEN_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "img":
         buttons = [[
-            InlineKeyboardButton('« 𝐵𝑎𝑐𝑘', callback_data='help')
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -653,6 +702,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=Script.CARBON_TXT,
+            disable_web_page_preview=True,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "fonts":
+        buttons = [[
+            InlineKeyboardButton('🧑‍🦯 ʙᴀᴄᴋ', callback_data='hellp')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=Script.FONTS_TXT,
             disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode='html'
