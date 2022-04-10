@@ -258,7 +258,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -1068,7 +1068,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
 
         if status == "True":
             await save_group_settings(grpid, set_type, False)
