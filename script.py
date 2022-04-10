@@ -151,6 +151,55 @@ Report something wrong to group admins for review!
 • These commands can be used only in group.
 • These commands can be used by any group member."""
 
+    SONG_TXT = """Help: <b>🎼Song Download🎼</b>
+
+Song Download Module, For Those Who Love Music.
+
+<b>𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌</b>
+- /song [Song Name] - To Download Music 😁.
+
+<b>Usage</b>
+- Can Be Used By Everyone
+- Works in bot pm."""
+
+    VIDEO_TXT = """Help: <b>VIDEO</b>
+
+Help You To Download Video From YouTube.
+
+<b><u>𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌:</u></b>
+• Type /video or /MP4 And [YouTube Link]
+• Example:- <code>/video https://youtu.be/8FAUEv_E_xQ</code> 
+
+<b>USAGE:</b>
+• You Can Download Any Video From YouTube"""
+
+    YTTHUMB_TXT = """Help: <b>YouTube Thumbnail</b>
+
+Help To Download Any YouTube Video Thumbnail.
+
+<b><u>𝖢𝗈𝗆𝗆𝖺𝗇𝖽𝗌:</u></b>
+• Type /ytthumb And [YouTube Link]
+• Example:- <code>/ytthumb https://youtu.be/8FAUEv_E_xQ</code> 
+
+<b>USAGE:</b>
+• You Can Download From YouTube Thumbnail"""
+
+    PASSWORD_GEN_TXT = """Help: <b>Password Generator</b>
+
+There Is Nothing To Know More. Send Me The Limit Of Your Password.
+- I Will Give The Password Of That Limit.
+
+<b>Commands and Usage:</b>
+• /genpassword or /genpw <code>20</code>
+
+<b>NOTE:</b>
+• Only Digits Are Allowed
+• Maximum Allowed Digits Till 84 
+(I Can't Generate Passwords Above The Length 84)
+• Nancy should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
     AFK_TXT = """Help: <b>AFK</b>
 
 Away From Keyboard is to tell that you're not available!
