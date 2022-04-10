@@ -129,7 +129,7 @@ async def advantage_spoll_choker(bot, query):
     if int(ad_user) in ADMINS:
         pass
     elif int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("okDa", show_alert=True)
+        return await query.answer("➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
@@ -170,20 +170,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+                    return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+                return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+            return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
@@ -237,7 +237,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode="md"
         )
-        return await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
+        return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -281,7 +281,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
+        return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -299,7 +299,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
     elif query.data == "backcb":
         await query.answer()
 
@@ -310,7 +310,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('𝙆𝙀𝙍𝘼𝙇𝘼 𝙍𝙊𝘾𝙆𝙀𝙍𝙎 💝')
+            return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
         buttons = []
         for groupid in groupids:
             try:
@@ -437,7 +437,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             protect_content=True if ident == 'checksubp' else False
         )
     elif query.data == "pages":
-        await query.answer()
+        await query.answer(➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시)
     elif query.data == "start":
         buttons =[[
             InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
@@ -457,7 +457,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-        await query.answer('𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+        await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('ᴀᴅᴍɪɴ', callback_data='admin'),
@@ -1115,7 +1115,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Piracy Is Crime')
+    await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
 
 
 async def auto_filter(client, msg, spoll=False):
@@ -1181,7 +1181,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0, [
         InlineKeyboardButton(f"🔮 {search}", "dupe"),
-        InlineKeyboardButton(f"📁 Files: {total_results}", "dupe")
+        InlineKeyboardButton(f"🗂️ Files: {total_results}", "dupe")
     ])
     reply_id = message.reply_to_message.message_id if message.reply_to_message else message.message_id
     imdb = await get_poster(search, file=(files[0]).file_name) if settings["imdb"] else None
