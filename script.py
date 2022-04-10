@@ -111,6 +111,18 @@ USAGE:
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
+    FONTS_TXT = """HELP: <b>FONTS</b>
+
+Want Some Stylish Fonts Send.
+
+USAGE:
+➢ /font [text] Create Font with given text..
+
+<b>NOTE</b>:
+• Nancy should have admin privillage.
+• These commands works on both pm and group.
+• These commands can be used by any group member."""
+
     LOCK_TXT = """Here is the help for the <b>Locks</b> module:
 
 <b>Admin only</b>:
