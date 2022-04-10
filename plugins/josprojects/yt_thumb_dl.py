@@ -39,14 +39,12 @@ async def send_thumbnail(bot, update):
             quality=quality
         )
         await update.reply_photo(
-            photo=thumbnail,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('join projects channel', url='https://telegram.me/josprojects')]]),
+            photo=thumbnail,             
             quote=True
         )
         await message.delete()
     except Exception as error:
         await message.edit_text(
-            text="**Please Use** /ytthumb (youtube link)\n\n**Example:** `/ytthumb https://youtu.be/h6PtzFYaMxQ`",
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('join projects channel', url='https://telegram.me/josprojects')]])
+            text="**Please Use** /ytthumb (youtube link)\n\n**Example:** `/ytthumb https://youtu.be/8FAUEv_E_xQ`",
+            disable_web_page_preview=True,           
         )
