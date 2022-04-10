@@ -1,11 +1,7 @@
 class Script(object):
-    START_TXT = """Hello {},
+    START_TXT = """<b>Hello {},
 
-My name is <a href=https://t.me/{}>{}</a>!
-
-<b>I can provide Movies. A Telegram Auto Filter Bot. Its Easy To Use Me :)
-
-Just Add me to Your Group As Admin, Hit The Help Button For More Info..</b>"""
+My Name is <a href=https://t.me/{}>{}</a>. A Smart RoBot With Many Amazing Features. I Can Provide Movies & Help You To Manage Your Groups, Just Add Me To Your Group And Enjoy.🥰</b>"""
 
     HELP_TXT = """<b>Hey {}
 Here Is The Help For My Commands.</b>"""
@@ -16,20 +12,20 @@ Here Is The Help For My Commands.</b>"""
 
     BOTSTATUS_TXT = """Send /status for getting bot and heroku status"""
 
-    ABOUT_TXT = """<b>➥ My name: {}
-➥ Creator: <a href='https://t.me/zautekm'>Zaute Km</a>
-➥ Library: <a href='https://docs.pyrogram.org/'>Pyrogram</a>
-➥ Language: Python 𝟹
-➥ Data Base: <a href='https://www.mongodb.com/'>MongoDB</a>
-➥ Bot Server: <a href='https://heroku.com'>Heroku</a>
-➥ Build Status: v2.0.1 [ Beta ]"""
+    ABOUT_TXT = """<b>✯ Mʏ Nᴀᴍᴇ : <a href='https://t.me/Oru_adaar_Robot'>Nᴀɴᴄʏ 🌸</a>
+✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/Hacker_Jr'>HᴀᴄKᴇʀ Jʀ 🇮🇳 / 🇺🇸</a>
+✯ Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʀᴏɢʀᴀᴍ</a>
+✯ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/'>Pʏᴛʜᴏɴ 3</a>
+✯ Dᴀᴛᴀ Bᴀsᴇ: <a href='https://cloud.mongodb.com/'>Mᴏɴɢᴏ Dʙ</a>
+✯ Bᴏᴛ Sᴇʀᴠᴇʀ: <a href='https://heroku.com/'>Hᴇʀᴏᴋᴜ</a>
+✯ Bᴜʟʟᴅ Sᴛᴀᴛᴜs: <code>ᴠ3.0.2 [ Bᴇᴛᴀ ]</code></b>"""
    
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and Dingdi will respond whenever a keyword is found the message
 
 <b>NOTE:</b>
-1. IMDb should have admin privillage.
+1. Nancy should have admin privillage.
 2. Only admins can add filters in a chat.
 3. Alert buttons have a limit of 64 characters.
 
@@ -41,11 +37,11 @@ Here Is The Help For My Commands.</b>"""
 
     BUTTON_TXT = """Help: <b>Buttons</b>
 
-- tgmoviebot support both url and alert inline buttons.
+- Nancy support both url and alert inline buttons.
 
 <b>NOTE:</b>
 1. Telegram will not allows you to send buttons without any content, so content is mandatory.
-2. IMDb supports buttons with any telegram media type.
+2. Nancy supports buttons with any telegram media type.
 3. Buttons should be properly parsed as markdown format.
 
 <b>URL buttons:</b>
@@ -62,6 +58,8 @@ Bot Send Json For All Replied Messages Using A Simple Command.
 
 ◉ /json :- Reply To Any Message To Get Json
 ◉ You Can Use This Command In Pm And Groups."""
+
+    IPADD_TXT = """➢ /ip [text] Address Name"""
 
     COUNTRY_TXT = """Help: <b>COUNTRY</b>
 
@@ -267,7 +265,7 @@ Paste some texts or documents on a website!
 • /paste [reply] - paste the replied text on Pasty
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -279,7 +277,7 @@ Do as you wish with telegra.ph module!
 • /tgmedia or /tgraph - upload supported media (within 5MB) to telegraph.
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -293,7 +291,7 @@ Get information about something!
 • /json - get the json details of a message.
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -303,7 +301,7 @@ Get information about something!
 • /torrent or /tor <movie name>: Get Your Torrent Link From Various Resource.
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -315,7 +313,7 @@ Translate texts to a specific language!
 • /tr [language code][reply] - translate replied message to specific language.
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • IMDb can translate texts to 200+ languages."""
 
@@ -328,7 +326,7 @@ Search many things without leaving telegram!
 • /search  - get the film information from various sources.
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • More search tools can be found on inline.
 • Those commands works on both pm and group."""
 
@@ -340,7 +338,7 @@ Need to delete lots of messages? That's what purges are for!
 • /purge - delete all messages from the replied to message, to the current message.
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on group.
 • These commands can be used by Only admin."""
 
@@ -362,7 +360,7 @@ This module allows you to do that easily, by exposing some common actions, so ev
 -> <code>/tmute @username 2h</code>
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on group.
 • These commands can be used by Only admin."""
 
@@ -375,7 +373,7 @@ All the pin related commands can be found here; keep your chat up to date on the
 • /unpin: Unpin the current pinned message. If used as a reply, unpins the replied to message.
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works only group.
 • These commands can be used by Only admin."""
 
@@ -421,7 +419,7 @@ Some dank memes for fun or whatever!
 • /runs strings
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -436,7 +434,7 @@ Some URLs is Shortner
 <code>/short https://t.me/josprojects</code>
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -448,7 +446,7 @@ A module to convert text to voice with language support.
 • /tts - Reply to any text message with language code to convert as audio.
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -479,7 +477,7 @@ Music download modules, for those who love music.
 <b>Example:</b> <code>/ytthumb https://youtu.be/h6PtzFYaMxQ</code>
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
@@ -523,7 +521,7 @@ a bot to create a link to share text in the telegram.
 • /share (text or reply to message)
 
 <b>NOTE:</b>
-• IMDb should have admin privillage.
+• Nancy should have admin privillage.
 • These commands works on both pm and group.
 • These commands can be used by any group member."""
 
