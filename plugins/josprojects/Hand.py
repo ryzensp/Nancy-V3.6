@@ -28,8 +28,7 @@ async def text(bot, message):
         await txt.edit("Uploading...")
         await bot.send_photo(
             chat_id=chat_id,
-            photo=file_name,
-            caption="Join <a href='https://t.me/MovieHubOfficialGroup>Movie Hub Official</a>"
+            photo=file_name,            
         )
         await txt.delete()
         os.remove(file_name)
