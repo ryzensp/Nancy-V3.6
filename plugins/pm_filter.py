@@ -1134,7 +1134,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
             return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
 
-        if status == "True":
+        if status == "True" or status == "Chat":
             await save_group_settings(grpid, set_type, False)
         else:
             await save_group_settings(grpid, set_type, True)
@@ -1148,6 +1148,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                                          callback_data=f'setgs#button#{settings["button"]}#{str(grp_id)}'),
                     InlineKeyboardButton('Single' if settings["button"] else 'Double',
                                          callback_data=f'setgs#button#{settings["button"]}#{str(grp_id)}')
+                ],
+                [
+                    InlineKeyboardButton( 'Redirect To',
+                                         callback_data=f'setgs#redirect_to#{settings["redirect_to"]}#{grp_id}',),
+                    InlineKeyboardButton('👤 PM' if settings["redirect_to"] == "PM" else '📄 Chat',
+                                         callback_data=f'setgs#redirect_to#{settings["redirect_to"]}#{grp_id}',),
                 ],
                 [
                     InlineKeyboardButton('Bot PM', callback_data=f'setgs#botpm#{settings["botpm"]}#{str(grp_id)}'),
@@ -1204,6 +1210,7 @@ async def auto_filter(client, msg, spoll=False):
         message = msg.message.reply_to_message  # msg will be callback query
         search, files, offset, total_results = spoll
     pre = 'filep' if settings['file_secure'] else 'file'
+    pre = 'Chat' if settings['redirect_to'] == 'Chat' else pre
     if settings["button"]:
         btn = [
             [
