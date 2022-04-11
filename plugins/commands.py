@@ -205,8 +205,7 @@ async def start(client, message):
                     logger.exception(e)
                     continue
             await asyncio.sleep(1) 
-        return await sts.delete()
-        
+        return await sts.delete()       
 
     files_ = await get_file_details(file_id)           
     if not files_:
@@ -244,21 +243,13 @@ async def start(client, message):
             f_caption=f_caption
     if f_caption is None:
         f_caption = f"{files.file_name}"
-    buttons = [
-            [
-                InlineKeyboardButton('🔰 ᴄʜᴀɴɴᴇʟ', url='https://t.me/kerala_rockers'),                       
-                InlineKeyboardButton('🔱 ᴄʜᴀɴɴᴇʟ', url=f'https://t.me/+CeY_RGCtK1g0ZWQ9')
-            ]
-            ]
     await client.send_cached_media(
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup(buttons),
         protect_content=True if pre == 'filep' else False,
         )
                     
-
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
 async def channel_info(bot, message):
            
