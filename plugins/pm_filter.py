@@ -155,15 +155,10 @@ async def advantage_spoll_choker(bot, query):
             await asyncio.sleep(10)
             await k.delete()
 
-
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data == "close_data":
         await query.message.delete()
-        try:
-            await query.message.reply_to_message.delete()
-        except:
-            pass
     elif query.data == "delallconfirm":
         userid = query.from_user.id
         chat_type = query.message.chat.type
@@ -177,20 +172,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+                    return await query.answer('Piracy Is Crime')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+                return await query.answer('Piracy Is Crime')
 
         elif chat_type in ["group", "supergroup"]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+            return await query.answer('Piracy Is Crime')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == "creator") or (str(userid) in ADMINS):
@@ -244,7 +239,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode="md"
         )
-        return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+        return await query.answer('Piracy Is Crime')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -265,7 +260,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode="md")
-        return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+        return await query.answer('Piracy Is Crime')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -288,7 +283,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+        return await query.answer('Piracy Is Crime')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -306,7 +301,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode="md"
             )
-        return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+        return await query.answer('Piracy Is Crime')
     elif query.data == "backcb":
         await query.answer()
 
@@ -317,7 +312,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+            return await query.answer('Piracy Is Crime')
         buttons = []
         for groupid in groupids:
             try:
@@ -350,17 +345,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             alert = alert.replace("\\n", "\n").replace("\\t", "\t")
             await query.answer(alert, show_alert=True)
     if query.data.startswith("file"):
-        ident, file_id = query.data.split("#")
-        files_ = await get_file_details(file_id)
-        user = query.message.reply_to_message.from_user.id
-        ad_user = query.from_user.id
-        if int(ad_user) in ADMINS:
-            pass
-        elif int(user) != 0 and query.from_user.id != int(user):
-            return await query.answer(
-                "All right, but this is not yours.;\nNice Try! But, This Was Not Your Request, Request Yourself;",
-                show_alert=True)
+        ident, file_id, rid = query.data.split("#")
 
+        if int(rid) not in [query.from_user.id, 0]:
+            return await query.answer(UNAUTHORIZED_CALLBACK_TEXT, show_alert=True)
+
+        files_ = await get_file_details(file_id)
         if not files_:
             return await query.answer('No such file exist.')
         files = files_[0]
@@ -378,12 +368,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             f_caption = f_caption
         if f_caption is None:
             f_caption = f"{files.file_name}"
-        buttons = [
-            [
-                InlineKeyboardButton('🔰 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+CeY_RGCtK1g0ZWQ9'),
-                InlineKeyboardButton('🔱 ᴄʜᴀɴɴᴇʟ', url='https://t.me/kerala_rockers')
-            ]
-            ]
 
         try:
             if AUTH_CHANNEL and not await is_subscribed(client, query):
@@ -397,17 +381,63 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     chat_id=query.from_user.id,
                     file_id=file_id,
                     caption=f_caption,
-                    reply_markup=InlineKeyboardMarkup(buttons),
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('Check PM, I have sent files in pm', show_alert=False)
+                await query.answer('Check PM, I have sent files in pm', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
         except Exception as e:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+    
+    elif query.data.startswith("Chat"):
+        ident, file_id, rid = query.data.split("#")
 
+        if int(rid) not in [query.from_user.id, 0]:
+            return await query.answer(UNAUTHORIZED_CALLBACK_TEXT, show_alert=True)
+
+        files_ = await get_file_details(file_id)
+        if not files_:
+            return await query.answer('No such file exist.')
+        files = files_[0]
+        title = files.file_name
+        size = get_size(files.file_size)
+        f_caption = files.caption
+        settings = await get_settings(query.message.chat.id)
+        if CUSTOM_FILE_CAPTION:
+            try:
+                f_caption = CUSTOM_FILE_CAPTION.format(file_name='' if title is None else title,
+                                                       file_size='' if size is None else size,
+                                                       file_caption='' if f_caption is None else f_caption)
+            except Exception as e:
+                logger.exception(e)
+            f_caption = f_caption
+        if f_caption is None:
+            f_caption = f"{files.file_name}"
+
+        try:
+            if AUTH_CHANNEL and not await is_subscribed(client, query):
+                await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                return
+            elif settings['botpm']:
+                await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+                return
+            else:
+                await client.send_cached_media(
+                    chat_id=query.from_user.id,
+                    file_id=file_id,
+                    caption=f_caption,
+                    protect_content=True if ident == "filep" else False 
+                )
+                await query.answer('Check PM, I have sent files in pm', show_alert=True)
+        except UserIsBlocked:
+            await query.answer('Unblock the bot mahn !', show_alert=True)
+        except PeerIdInvalid:
+            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+        except Exception as e:
+            await query.answer(url=f"https://t.me/{temp.U_NAME}?start={ident}_{file_id}")
+    
     elif query.data.startswith("Chat"):
         ident, file_id, rid = query.data.split("#")
 
@@ -458,7 +488,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 )
             )
             await query.answer('Check Out The Chat',)
-            await asyncio.sleep(900)
+            await asyncio.sleep(DELETE_TIME)
             await msg1.delete()
             await msg.delete()
             del msg1, msg
@@ -488,18 +518,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f_caption = f_caption
         if f_caption is None:
             f_caption = f"{title}"
-        buttons = [
-            [
-                InlineKeyboardButton('🔰 ᴄʜᴀɴɴᴇʟ', url='https://t.me/+CeY_RGCtK1g0ZWQ9'),
-                InlineKeyboardButton('🔱 ᴄʜᴀɴɴᴇʟ', url='https://t.me/kerala_rockers')
-            ]
-            ]
         await query.answer()
         await client.send_cached_media(
             chat_id=query.from_user.id,
             file_id=file_id,
             caption=f_caption,
-            reply_markup=InlineKeyboardMarkup(buttons),
             protect_content=True if ident == 'checksubp' else False
         )
     elif query.data == "pages":
