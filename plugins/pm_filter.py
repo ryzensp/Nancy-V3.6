@@ -1126,13 +1126,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
       )
-    elif query.data.startswith("setgs"):
+elif query.data.startswith("setgs"):
         ident, set_type, status, grp_id = query.data.split("#")
         grpid = await active_connection(str(query.from_user.id))
 
         if str(grp_id) != str(grpid):
             await query.message.edit("Your Active Connection Has Been Changed. Go To /settings.")
-            return await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+            return await query.answer('Piracy Is Crime')
 
         if status == "True" or status == "Chat":
             await save_group_settings(grpid, set_type, False)
@@ -1185,7 +1185,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('➪ 𝙉𝘼𝙉𝘾𝙔 🎀 낸시')
+    elif query.data == "close":
+        await query.message.delete()
+    elif query.data == 'tips':
+        await query.answer("=> Ask with correct spelling\n=> Don't ask movies those are not released in OTT\n=> For better results:\n\t\t\t\t\t\t- MovieName Language\n\t\t\t\t\t\t- Eg: Solo Malayalam", True)
+    try: await query.answer('Piracy Is Crime') 
+    except: pass
 
 
 async def auto_filter(client, msg, spoll=False):
