@@ -424,8 +424,7 @@ async def settings(client, message):
                     'Single' if settings["button"] else 'Double',
                     callback_data=f'setgs#button#{settings["button"]}#{grp_id}',
                 ),
-            ],
-            [
+            ],[
                 InlineKeyboardButton(
                     'Redirect To',
                     callback_data=f'setgs#redirect_to#{settings["redirect_to"]}#{grp_id}',
@@ -541,3 +540,4 @@ async def save_template(client, message):
     template = message.text.split(" ", 1)[1]
     await save_group_settings(grp_id, 'template', template)
     await sts.edit(f"Successfully changed template for {title} to\n\n{template}")
+    
