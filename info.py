@@ -1,3 +1,4 @@
+from asyncio.log import logger
 import re
 from os import environ
 
@@ -9,6 +10,15 @@ def is_enabled(value, default):
         return False
     else:
         return default
+
+def redirected_env(value):
+    value = str(value)
+    if value.lower() in ['chat', 'group', 'channel', 'supergroup', 'true']:
+        return 'Chat'
+    elif value.lower() in ['user', '0', 'pm', 'personal', 'bot', 'bot pm', 'false']:
+        return 'PM'
+    else:
+        return 'Chat'
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
@@ -57,6 +67,9 @@ FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
+
+UNAUTHORIZED_CALLBACK_TEXT = (environ.get('UNAUTHORIZED_CALLBACK_TEXT', "oKda"))[:200]
+REDIRECT_TO = (environ.get('REDIRECT_TO', 0))
 
 LOG_STR = "Current Cusomized Configurations are:-\n"
 LOG_STR += ("IMDB Results are enabled, Bot will be showing imdb details for you queries.\n" if IMDB else "IMBD Results are disabled.\n")
