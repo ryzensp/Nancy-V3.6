@@ -66,6 +66,11 @@
             "description": "Name of the collections. Defaults to Telegram_files. If you are using the same database, then use different collection name for each bot",
             "value": "Telegram_files",
             "required": false
+        },
+        "REDIRECT_TO":{
+            "description": "Username of the channel without '@' to send files and redirect users to. Deafults to 0 (no redirect).",
+            "value": "oKda",
+            "required": false
         }
     },
     "addons": [],
