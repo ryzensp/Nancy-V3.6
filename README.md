@@ -5,7 +5,7 @@ You can deploy this bot anywhere.
 <details><summary>Deploy to Heroku</summary>
 <p>
 <br>
-<a href="https://heroku.com/deploy?template=https://github.com/HackerX7/Nancy-V3.6/tree/master">
+<a href="https://heroku.com/deploy?template=https://github.com/likucs/Nancy-V3.6/tree/master">
   <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
 </a>
 </p>
