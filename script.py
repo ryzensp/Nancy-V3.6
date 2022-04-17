@@ -4,7 +4,7 @@ class Script(object):
 My Name is <a href=https://t.me/{}>{}</a>. A Smart RoBot With Many Amazing Features. I Can Provide Movies & Help You To Manage Your Groups, Just Add Me To Your Group And Enjoy.🥰</b>"""
 
     HELP_TXT = """<b>Hey {}
-Here Is The Help For My Commands.</b>"""
+Here Is The Help For My Commands 📚.</b>"""
 
     HACKER_TXT = """<b>Here Is The Help For My Commands.</b>"""
 
@@ -12,14 +12,25 @@ Here Is The Help For My Commands.</b>"""
 
     BOTSTATUS_TXT = """Send /status for getting bot and heroku status"""
 
-    ABOUT_TXT = """<b>✯ Mʏ Nᴀᴍᴇ : <a href='https://t.me/Oru_adaar_Robot'>Nᴀɴᴄʏ 🌸</a>
-✯ Cʀᴇᴀᴛᴏʀ: <a href='https://t.me/Hacker_Jr'>HᴀᴄKᴇʀ Jʀ 🇮🇳 / 🇺🇸</a>
-✯ Lɪʙʀᴀʀʏ: <a href='https://docs.pyrogram.org/'>Pʀᴏɢʀᴀᴍ</a>
-✯ Lᴀɴɢᴜᴀɢᴇ: <a href='https://www.python.org/'>Pʏᴛʜᴏɴ 3</a>
-✯ Dᴀᴛᴀ Bᴀsᴇ: <a href='https://cloud.mongodb.com/'>Mᴏɴɢᴏ Dʙ</a>
-✯ Bᴏᴛ Sᴇʀᴠᴇʀ: <a href='https://heroku.com/'>Hᴇʀᴏᴋᴜ</a>
-✯ Bᴜʟʟᴅ Sᴛᴀᴛᴜs: <code>ᴠ3.0.2 [ Bᴇᴛᴀ ]</code></b>"""
-   
+    ABOUT_TXT = """<b>HEY {} DUDE 🙋‍♂️
+📚 𝖢ᴏᴍᴍᴀɴᴅ ʜᴇʟᴘ 📚</b>"""
+    ABOUT_TXT = """
+<b>🤖 ʙᴏᴛ ɴᴀᴍᴇ: <a href='https://t.me/mcmoviesData2_Bot'>ʜᴀɴɴʏᴀ.</a>
+
+📝 ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/'>ᴘʏᴛʜᴏɴ</a>
+
+📚 ꜰʀᴀᴍᴇᴡᴏʀᴋ : <a href='https://github.com/pyrogram/pyrogram'>ᴘʏʀᴏɢʀᴀᴍ</a>
+
+📡 ʜᴏsᴛᴇᴅ ᴏɴ : <a href='http://heroku.com/'>ʜᴇʀᴏᴋᴜ</a>
+
+👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/iAmLiKu1'>ᴄs ʟɪᴋᴜ ❥︎</a>
+
+💡 sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ : <a href='https://t.me/cs_cloud'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a>
+
+👥 sᴜᴘᴘᴏʀᴛ ɢʀᴏᴜᴘ : <a href='https://t.me/+oMiWi94WoAQ0MmY5'>Mᴏᴠɪᴇs ᴄʟᴜʙ</a>
+
+📢 ᴜᴘᴅᴀᴛᴇs ᴄʜᴀɴɴᴇʟ : <a href='https://t.me/+qdq5ZO_xDytkYzJl'>ᴍᴄ ᴄʟᴜʙ</a>
+\n\n🔖 𝑸𝒖𝒐𝒕𝒆 : <code>plz bro credit de dena</code></b>"""
     MANUALFILTER_TXT = """Help: <b>Filters</b>
 
 - Filter is the feature were users can set automated replies for a particular keyword and Dingdi will respond whenever a keyword is found the message
