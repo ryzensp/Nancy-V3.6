@@ -162,7 +162,7 @@ async def imdb_callback(bot: Client, quer_y: CallbackQuery):
             [
                 InlineKeyboardButton(
                     text=f"🔮 Join Main Channel 🔮",
-                    url="https://t.me/kerala_rockers"
+                    url="https://t.me/MOVIES_CLUB_OP"
                 )
             ],
         ]
