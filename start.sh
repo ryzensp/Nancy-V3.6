@@ -1,5 +1,5 @@
 echo "Cloning Repo, Please Wait..."
-git clone -b master https://github.com/HackerX7/Nancy-V3.6.git /Nancy-V3.6
+git clone -b master https://github.com/cshowl/Nancy-V3.6.git /Nancy-V3.6
 cd /Nancy-V3.6
 echo "Installing Requirements..."
 pip3 install -U -r requirements.txt
